@@ -9,21 +9,21 @@ const services = [
     num: "01",
     title: "Front-end Developer",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur quo nam aliquid, eveniet labore ipsa, cupiditate nulla facere.",
+      "Creation of intuitive and dynamic interfaces that ensure a smooth and engaging user experience. With attention to detail and a focus on performance, I transform designs into interactive websites and applications using the latest technologies.",
     href: "",
   },
   {
     num: "02",
     title: "Web Development",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur quo nam aliquid, eveniet labore ipsa, cupiditate nulla facere.",
+      "Development of complete web solutions, from server and database structuring to the implementation of robust and scalable systems. I follow best development practices to deliver fast, secure, and efficient websites.",
     href: "",
   },
   {
     num: "03",
     title: "UI/UX Design",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur quo nam aliquid, eveniet labore ipsa, cupiditate nulla facere.",
+      "Designing user-centered digital experiences by combining aesthetics and functionality to create visually appealing and easy-to-use interfaces. With a user-focused approach, I develop designs that enhance usability and drive results.",
     href: "",
   },
 ];

@@ -23,7 +23,7 @@ const projects = [
     category: "Full Stack",
     title: "Saving Pets",
     description:
-      "This is a project that began during my college with the aim of being presented at the end of the course by the discipline of Project Integrator, but throughout the project we saw that it could become something real and that would help pets truly...",
+      "This is a project that began during my college with the aim of being presented at the end of the course by the discipline of Project Integrator, but throughout the project we saw that it could become something real and that would help pets truly.",
     stack: [
       {
         name: "Next.js",
@@ -53,7 +53,7 @@ const projects = [
     category: "Full Stack",
     title: "Number Secret",
     description:
-      "This is a project personal that I created for trainning Javascript and API's. Summarizing it is a this is a guessing game using voice recognition...",
+      "This is a project personal that I created for trainning Javascript and API's. Summarizing it is a this is a guessing game using voice recognition.",
     stack: [
       {
         name: "Html 5",
@@ -73,8 +73,7 @@ const projects = [
     num: "03",
     category: "Frontend",
     title: "Tennis Trend",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, ipsam laboriosam! Repudiandae nostrum ducimus quaerat nam optio cum laudantium! Mollitia, assumenda.",
+    description: "Frontend of a digital tennis web store.",
     stack: [
       {
         name: "Next.js",
