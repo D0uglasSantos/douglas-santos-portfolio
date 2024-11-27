@@ -44,7 +44,7 @@ const projects = [
         name: "Postgress",
       },
     ],
-    image: "/assets/work/thumb1.png",
+    image: "/assets/work/thumb1.svg",
     live: "https://saving-pets.vercel.app/",
     github: "https://github.com/D0uglasSantos/front-end-saving-pets",
   },
@@ -65,15 +65,15 @@ const projects = [
         name: "Javascript",
       },
     ],
-    image: "/assets/work/thumb2.png",
+    image: "/assets/work/thumb2.svg",
     live: "https://game-secret-number-seven.vercel.app/",
     github: "https://github.com/D0uglasSantos/game_secret_number",
   },
   {
     num: "03",
     category: "Frontend",
-    title: "Tennis Trend",
-    description: "Frontend of a digital tennis web store.",
+    title: "Restaura",
+    description: "Frontend of a restaurant landingpage.",
     stack: [
       {
         name: "Next.js",
@@ -87,31 +87,124 @@ const projects = [
       {
         name: "Tailwindcss",
       },
+      {
+        name: "Framer Motion",
+      },
     ],
-    image: "/assets/work/thumb3.png",
-    live: "https://tennis-trend.vercel.app/",
-    github: "https://github.com/D0uglasSantos/tennis-trend",
+    image: "/assets/work/thumb3.svg",
+    live: "https://restaura-restaurant.vercel.app/",
+    github: "https://github.com/D0uglasSantos/restaura",
   },
   {
     num: "04",
     category: "Frontend",
-    title: "Hello World",
+    title: "Untitled UI",
     description:
-      "I built this Blog to understand some subjects, and there's nothing better than learning by teaching, right?! This is a blog about curiosities in the IT area.",
+      "Study project in tailwind css. It is an administration interface for any application.",
     stack: [
       {
-        name: "Html 5",
+        name: "Next.js",
       },
       {
-        name: "CSS 3",
+        name: "React.js",
+      },
+      {
+        name: "Typescript",
+      },
+      {
+        name: "Tailwindcss",
+      },
+      {
+        name: "Framer Motion",
+      },
+    ],
+    image: "/assets/work/thumb4.svg",
+    live: "https://untlited-ui.vercel.app/",
+    github: "https://github.com/D0uglasSantos/tailwind-next",
+  },
+  {
+    num: "05",
+    category: "Frontend",
+    title: "Dev Tech",
+    description:
+      "This is a study project with shopping cart features and adding, removing and updating purchase items. Not responsive yet!",
+    stack: [
+      {
+        name: "Next.js",
+      },
+      {
+        name: "React.js",
+      },
+      {
+        name: "Typescript",
+      },
+      {
+        name: "Tailwindcss",
+      },
+      {
+        name: "Framer Motion",
+      },
+      {
+        name: "Redux",
+      },
+    ],
+    image: "/assets/work/thumb5.svg",
+    live: "https://dev-tech-challenger.vercel.app/",
+    github: "https://github.com/D0uglasSantos/dev-tech",
+  },
+  {
+    num: "06",
+    category: "Frontend",
+    title: "Film Finder",
+    description:
+      "This is an API study project. A movie search site that shows the rating and other information about the desired movie.",
+    stack: [
+      {
+        name: "Next.js",
+      },
+      {
+        name: "React.js",
       },
       {
         name: "Javascript",
       },
+      {
+        name: "CSS",
+      },
     ],
-    image: "/assets/work/thumb4.png",
-    live: "https://mundo-voce-sabia.vercel.app/",
-    github: "https://github.com/D0uglasSantos/mundo-voce-sabia",
+    image: "/assets/work/thumb6.svg",
+    live: "https://dev-tech-challenger.vercel.app/",
+    github: "https://github.com/D0uglasSantos/dev-tech",
+  },
+  {
+    num: "07",
+    category: "Full Stack",
+    title: "CrudLibrary",
+    description:
+      "This is a full stack project of a crud for managing customers in a bookstore.",
+    stack: [
+      {
+        name: "React.js",
+      },
+      {
+        name: "Javascript",
+      },
+      {
+        name: "Node",
+      },
+      {
+        name: "Docker",
+      },
+      {
+        name: "Mysql",
+      },
+      {
+        name: "CSS",
+      },
+    ],
+    image: "/assets/work/thumb7.svg",
+    live: "#",
+    github: "https://github.com/D0uglasSantos/CRUD-livraria",
   },
 ];
 
