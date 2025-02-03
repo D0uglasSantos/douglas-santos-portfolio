@@ -7,7 +7,7 @@ import {
   FaFigma,
   FaReact,
   FaNodeJs,
-  FaVuejs,
+  FaAngular,
   FaGitAlt,
 } from "react-icons/fa";
 import {
@@ -23,7 +23,7 @@ const about = {
     "Lorem ipsum dolor sit amet consectetur adipisicing at nam eum numquam optio?",
   info: [
     { fieldName: "Name", fieldValue: "Douglas Santos" },
-    { fieldName: "Phone", fieldValue: "(61) 99924-2049" },
+    { fieldName: "Phone", fieldValue: "+55 (61) 99924-2049" },
     { fieldName: "Experience", fieldValue: "2+ Years" },
     { fieldName: "Discord", fieldValue: "d0ug3253" },
     { fieldName: "Nationality", fieldValue: "Brazilian" },
@@ -53,9 +53,9 @@ const experience = {
       duration: "2022-2023",
     },
     {
-      company: "Ministry of the Environment",
-      position: "UX/UI and Web Developer",
-      duration: "2023-current",
+      company: "Ministry of the Environment - Brazil",
+      position: "UX/UI and Web Developer Jr.",
+      duration: "2023-2024",
     },
   ],
 };
@@ -108,8 +108,8 @@ const skills = {
       name: "React.js",
     },
     {
-      icon: <FaVuejs />,
-      name: "Vue.js",
+      icon: <FaAngular />,
+      name: "Angular.js",
     },
     {
       icon: <FaFigma />,

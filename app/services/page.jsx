@@ -3,30 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowDownRight } from "react-icons/bs";
-
-const services = [
-  {
-    num: "01",
-    title: "Front-end Developer",
-    description:
-      "Creation of intuitive and dynamic interfaces that ensure a smooth and engaging user experience. With attention to detail and a focus on performance, I transform designs into interactive websites and applications using the latest technologies.",
-    href: "",
-  },
-  {
-    num: "02",
-    title: "Web Development",
-    description:
-      "Development of complete web solutions, from server and database structuring to the implementation of robust and scalable systems. I follow best development practices to deliver fast, secure, and efficient websites.",
-    href: "",
-  },
-  {
-    num: "03",
-    title: "UI/UX Design",
-    description:
-      "Designing user-centered digital experiences by combining aesthetics and functionality to create visually appealing and easy-to-use interfaces. With a user-focused approach, I develop designs that enhance usability and drive results.",
-    href: "",
-  },
-];
+import { SERVICES } from "@/lib/constants";
 
 const Services = ({ props }) => {
   return (
@@ -40,7 +17,7 @@ const Services = ({ props }) => {
           }}
           className="grid grid-cols-1 md:grid-cols-2 gap-14"
         >
-          {services.map((service, index) => {
+          {SERVICES.map((service, index) => {
             return (
               <div
                 key={index}

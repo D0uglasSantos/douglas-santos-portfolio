@@ -15,10 +15,6 @@ const stats = [
     num: 10,
     text: "Technologies mastered",
   },
-  {
-    num: 300,
-    text: "Code Commits",
-  },
 ];
 
 const Stats = ({ props }) => {

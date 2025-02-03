@@ -18,9 +18,10 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarked } from "react-icons/fa";
 import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
+import { useContactForm } from "@/hooks/useContactForm";
 
 const info = [
-  { icon: <FaPhoneAlt />, title: "Phone", description: "(61) 99924-2049" },
+  { icon: <FaPhoneAlt />, title: "Phone", description: "+55 (61) 99924-2049" },
   {
     icon: <FaEnvelope />,
     title: "Email",
@@ -30,61 +31,7 @@ const info = [
 ];
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    firstname: "",
-    lastname: "",
-    email: "",
-    phone: "",
-    message: "",
-    service: "",
-  });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const validateForm = () => {
-    // Verifica se todos os campos foram preenchidos
-    for (let key in formData) {
-      if (formData[key] === "") {
-        return false;
-      }
-    }
-    return true;
-  };
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    // Valida se todos os campos estão preenchidos
-    if (!validateForm()) {
-      toast.error("Por favor, preencha todos os campos.");
-      return;
-    }
-
-    emailjs
-      .send(
-        "service_eygj9lp",
-        "template_oeqgobg",
-        formData,
-        "XxJFTqpoOwgnFbvEi"
-      )
-      .then((response) => {
-        toast.success("E-mail enviado com sucesso!");
-        // Limpa os campos após o envio
-        setFormData({
-          firstname: "",
-          lastname: "",
-          email: "",
-          phone: "",
-          message: "",
-          service: "",
-        });
-      })
-      .catch((err) => {
-        toast.error("Erro ao enviar o e-mail");
-      });
-  };
+  const { formData, handleChange, sendEmail } = useContactForm();
 
   return (
     <motion.section
@@ -113,7 +60,7 @@ const Contact = () => {
                   type="text"
                   name="firstname"
                   placeholder="Firstname"
-                  value={formData.firstname}
+                  value={formData.name}
                   onChange={handleChange}
                 />
                 <Input
@@ -138,27 +85,6 @@ const Contact = () => {
                   onChange={handleChange}
                 />
               </div>
-              <Select
-                onValueChange={(value) =>
-                  setFormData({ ...formData, service: value })
-                }
-              >
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select a service" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectGroup>
-                    <SelectLabel>Select a service</SelectLabel>
-                    <SelectItem value="web-developer">
-                      Web Development
-                    </SelectItem>
-                    <SelectItem value="frontend-developer">
-                      Frontend Development
-                    </SelectItem>
-                    <SelectItem value="ui/ux-design">UI/UX Design</SelectItem>
-                  </SelectGroup>
-                </SelectContent>
-              </Select>
               <Textarea
                 className="h-[200px]"
                 placeholder="Type your message here"
