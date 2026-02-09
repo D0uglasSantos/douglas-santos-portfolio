@@ -6,30 +6,67 @@ import { BsArrowDownRight } from "react-icons/bs";
 import { SERVICES } from "@/lib/constants";
 
 const Services = ({ props }) => {
+  const cardVariants = {
+    initial: { 
+      opacity: 0, 
+      y: 50 
+    },
+    animate: (index) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.2 + index * 0.2,
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    })
+  };
+
   return (
     <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
       <div className="container mx-auto">
         <motion.div
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 0, y: -20 }}
           animate={{
             opacity: 1,
-            transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+            y: 0,
+            transition: { duration: 0.5, ease: "easeOut" },
           }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-14"
+          className="mb-12"
         >
+          <h2 className="text-5xl font-bold text-white mb-4">
+            My <span className="text-accent">Services</span>
+          </h2>
+          <p className="text-white/60 max-w-2xl">
+            Specialized in creating exceptional digital experiences with modern technologies
+          </p>
+        </motion.div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-14">
           {SERVICES.map((service, index) => {
             return (
-              <div
+              <motion.div
                 key={index}
-                className="flex-1 flex flex-col justify-center gap-6 group"
+                custom={index}
+                initial="initial"
+                animate="animate"
+                variants={cardVariants}
+                whileHover={{ 
+                  scale: 1.02,
+                  transition: { duration: 0.2 }
+                }}
+                className="flex-1 flex flex-col justify-center gap-6 group p-8 rounded-xl bg-[#232329] hover:bg-[#2a2a30] transition-all duration-500 cursor-pointer"
               >
                 <div className="w-full flex justify-between items-center">
-                  <div className="text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">
+                  <motion.div 
+                    className="text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500"
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                  >
                     {service.num}
-                  </div>
+                  </motion.div>
                   <Link
                     href={service.href}
-                    className="w-[55px] h-[55px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45"
+                    className="w-[55px] h-[55px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45 hover:scale-110"
                   >
                     <BsArrowDownRight className="text-primary text-2xl" />
                   </Link>
@@ -37,12 +74,20 @@ const Services = ({ props }) => {
                 <h2 className="text-4xl font-bold leading-none text-white group-hover:text-accent transition-all duration-500">
                   {service.title}
                 </h2>
-                <p className="text-white/60">{service.description}</p>
-                <div className="border-b border-white/20 w-full"></div>
-              </div>
+                <p className="text-white/60 group-hover:text-white/80 transition-all duration-500">
+                  {service.description}
+                </p>
+                <motion.div 
+                  className="border-b border-white/20 w-full group-hover:border-accent/50 transition-all duration-500"
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ delay: 0.5 + index * 0.2, duration: 0.5 }}
+                  style={{ transformOrigin: "left" }}
+                />
+              </motion.div>
             );
           })}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
